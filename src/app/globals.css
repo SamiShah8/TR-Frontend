@@ -6,10 +6,13 @@
   --body-color: rgba(255, 255, 255, 0.916);
   --secondary-color: rgb(219, 96, 9);
   --primary-color: rgba(0, 0, 0, 0.332);
+  --font-family: font-serif;
 }
 
 body {
   background-color: var(--body-color);
+  font-family: var(--font-family);
+
 }
 
 img {
@@ -18,10 +21,18 @@ img {
   object-fit: cover;
 }
 
+
+
 h1 {
   text-transform: capitalize;
 }
 
 a {
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-size: small;
+
+}
+button {
+  font-size: small;
+  text-transform: uppercase;
 }

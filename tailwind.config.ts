@@ -13,6 +13,25 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      backgroundColor: {
+        header: "#ffffff",
+        footer: "blue",
+        "body-color": "var(--secondary-color)",
+      },
+      fontSize: {
+        "main-heading": "2rem",
+        "nav-font": "1rem",
+      },
+      fontFamily: {
+        "main-font": "font-serif",
+      },
+      fontSmoothing: {
+        type: "antialiased",
+      },
+      fontWeight: {
+        "heding-weight": "700",
+        "headin-weight2": "500",
+      },
     },
   },
   plugins: [],
