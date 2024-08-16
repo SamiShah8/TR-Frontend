@@ -14,14 +14,14 @@ function Navbar() {
   const [activeNav, setActiveNav] = useState("home");
   return (
     <header className="overflow-hidden">
-      <div className="header__container flex items-center justify-between mx-4 py-2">
-        <div className="w-20">
+      <div className="header__container flex items-center justify-between px-5 py-5">
+        <div className="w-16">
           <Image src={Logo} alt={"Technical Ranasaini Logo"} />
         </div>
-        <nav className="hidden lg:flex flex-1 items-center gap-20 px-20 text-[0.875rem] leading-[1.7]">
+        <nav className="hidden sm:flex flex-1 items-center gap-20 sm:gap-8 md:text-[8px] px-20 text-[0.875rem] leading-[1.7]">
           <a
             onClick={() => setActiveNav("home")}
-            className={`${
+            className={`nav-link ${
               activeNav === "home"
                 ? "text-black-800 font-bold"
                 : "text-gray-800"
@@ -36,7 +36,7 @@ function Navbar() {
               activeNav === "services"
                 ? "text-black font-bold"
                 : "text-gray-800"
-            }`}
+            } nav-link`}
             href="#"
           >
             services
@@ -45,15 +45,15 @@ function Navbar() {
             onClick={() => setActiveNav("contact")}
             className={`${
               activeNav === "contact" ? "text-black font-bold" : "text-gray-800"
-            }`}
+            } nav-link`}
             href="#"
           >
             contact
           </a>
           <a
             onClick={() => setActiveNav("about")}
-            className={`${
-              activeNav === "about" ? "text-black font-bold" : "text-gray-800"
+            className={`nav-link ${
+              activeNav === "about " ? "text-black font-bold" : "text-gray-800"
             }`}
             href="#"
           >
@@ -61,7 +61,7 @@ function Navbar() {
           </a>
           <a
             onClick={() => setActiveNav("resources")}
-            className={`${
+            className={`nav-link ${
               activeNav === "resources"
                 ? "text-black-800 font-bold"
                 : "text-gray-800"
@@ -71,12 +71,12 @@ function Navbar() {
             resources
           </a>
         </nav>
-        <div className="hidden lg:block">
-          <button className="text-center rounded-md bg-body-color w-48 h-10 hover:bg-orange-500 text-white">
+        <div className="sm:visible">
+          <button className="text-center tracking-widest text-[0.7rem] rounded-md bg-body-color px-3 py-2 hover:bg-orange-500 text-white">
             Build with us
           </button>
         </div>
-        <div className="md:hidden">
+        <div className="sm:hidden">
           {showNavbar ? (
             <AiOutlineClose
               className="h-6 w-6 cursor-pointer transition duration-150 ease-in-out"
@@ -144,7 +144,7 @@ function Navbar() {
           >
             resources
           </a>
-          <div className="w-[90%]">
+          <div className="w-[90%] ">
             <button className="text-center text-white rounded-md w-full hover:bg-orange-500 bg-body-color px-2 py-2 text-1.1rem font-bold uppercase">
               Build with us
             </button>

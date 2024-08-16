@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "./navbar";
 Navbar;
-const inter = Inter({ subsets: ["latin"] });
+const hankenGrotesk = Hanken_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "TR | Home",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={hankenGrotesk.className}>
         <Navbar />
         {children}
       </body>

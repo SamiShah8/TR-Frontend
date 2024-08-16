@@ -14,10 +14,12 @@ body {
   font-family: var(--font-family);
 
 }
+
 a {
   font-size: 1.25rem;
   line-height: 1.65rem;
 }
+
 img {
   width: 100%;
   height: 100%;
@@ -35,7 +37,14 @@ a {
   font-size: small;
 
 }
+
 button {
   font-size: small;
   text-transform: uppercase;
+}
+
+@layer components {
+  .nav-link {
+    @apply capitalize leading-[1.65] font-medium
+  }
 }
