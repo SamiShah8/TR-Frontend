@@ -14,14 +14,14 @@ function Navbar() {
   const [activeNav, setActiveNav] = useState("home");
   return (
     <header className="overflow-hidden">
-      <div className="header__container flex items-center justify-between px-5 py-5">
-        <div className="w-16">
+      <div className="header__container flex items-center justify-between p-5 lg:px-8 lg:py-7">
+        <div className="w-16 xxs:order-2 lg:w-24  ">
           <Image src={Logo} alt={"Technical Ranasaini Logo"} />
         </div>
-        <nav className="hidden sm:flex flex-1 items-center gap-20 sm:gap-8 md:text-[8px] px-20 text-[0.875rem] leading-[1.7]">
+        <nav className="hidden sm:flex sm:order- flex-1 items-center gap-20 sm:gap-8 lg:gap-9 xl:gap-24 px-20 text-[0.875rem] leading-[1.7]">
           <a
             onClick={() => setActiveNav("home")}
-            className={`nav-link ${
+            className={`nav-link md:text-[1.1rem] lg:text-[1.3rem] ${
               activeNav === "home"
                 ? "text-black-800 font-bold"
                 : "text-gray-800"
@@ -32,7 +32,7 @@ function Navbar() {
           </a>
           <a
             onClick={() => setActiveNav("services")}
-            className={`${
+            className={` md:text-[1.1rem] lg:text-[1.3rem] ${
               activeNav === "services"
                 ? "text-black font-bold"
                 : "text-gray-800"
@@ -43,7 +43,7 @@ function Navbar() {
           </a>
           <a
             onClick={() => setActiveNav("contact")}
-            className={`${
+            className={` md:text-[1.1rem] lg:text-[1.3rem] ${
               activeNav === "contact" ? "text-black font-bold" : "text-gray-800"
             } nav-link`}
             href="#"
@@ -52,31 +52,20 @@ function Navbar() {
           </a>
           <a
             onClick={() => setActiveNav("about")}
-            className={`nav-link ${
+            className={`nav-link md:text-[1.1rem] lg:text-[1.3rem] ${
               activeNav === "about " ? "text-black font-bold" : "text-gray-800"
             }`}
             href="#"
           >
             about
           </a>
-          <a
-            onClick={() => setActiveNav("resources")}
-            className={`nav-link ${
-              activeNav === "resources"
-                ? "text-black-800 font-bold"
-                : "text-gray-800"
-            }`}
-            href="#"
-          >
-            resources
-          </a>
         </nav>
-        <div className="sm:visible">
-          <button className="text-center tracking-widest text-[0.7rem] rounded-md bg-body-color px-3 py-2 hover:bg-orange-500 text-white">
+        <div className="xxs:hidden sm:visible ">
+          <button className="text-center tracking-widest text-[0.7rem] md:text-[1.1rem] md:capitalize rounded-md bg-body-color px-3 py-2 hover:bg-orange-500 text-white">
             Build with us
           </button>
         </div>
-        <div className="sm:hidden">
+        <div className="sm:hidden ">
           {showNavbar ? (
             <AiOutlineClose
               className="h-6 w-6 cursor-pointer transition duration-150 ease-in-out"

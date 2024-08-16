@@ -34,8 +34,7 @@ const config: Config = {
       },
       screens: {
         xs: "480px",
-        xxs:"319px",
-        
+        xxs: "319px",
       },
     },
   },
